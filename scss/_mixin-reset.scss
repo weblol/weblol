@@ -1,0 +1,107 @@
+//[reset]{{{
+@mixin reset($base-color, $bg-color){
+  * {
+    margin:0;
+    padding:0;
+    -webkit-user-select:none;
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color:rgba(0, 0, 0, 0);
+    -ms-touch-action:none;
+    -moz-user-select:-moz-none;
+    -webkit-touch-callout: none;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+  }
+  html{
+    font-family: Helvetica Neue, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+  }
+  body{
+    margin: 0 auto;
+    background: $bg-color;
+    line-height: 1.5;
+    color: $bbase-color;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%;
+  }
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display:block;
+  }
+  p, dl, dt, dd, table, td, th, input, img, form, div, span, ul, ol, li, h1, h2, h3, h4, h5, h6, select, input{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  img, iframe{
+    border: none;
+  }
+  ul, li, ol{
+    list-style: none;
+  }
+  img{
+    vertical-align: middle;
+  }
+  table{
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  input{
+    outline: none;
+  }
+  em, b, i, strong, cite, sub, sup, font{
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100%;
+  }
+  a{
+    color: $lnkColor;
+    text-decoration: none;
+    outline: none;
+    &:hover{
+      color: $lnkColorHover;
+    }
+  }
+  .clearfix{
+    zoom: 1;
+    &:before{
+      content: "";
+      display: table;
+    }
+    &:after{
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  .clear{
+    clear: both;
+  }
+}
+//[reset]}}}
+
+
+
+audio, canvas, video { display: inline-block;}
+input, select, textarea { font-size: 100%; -webkit-appearance: none;}
+textarea { resize:none;}
+table { border-collapse: collapse; border-spacing: 0;}
+fieldset, img{ border: 0;}
+a, a:hover { text-decoration: none;}
+img { max-width: 100%; vertical-align: top;}
+del { text-decoration: line-through;}
+address, caption, cite, em, th, b, strong, i { font-style: normal; font-weight: 400;}
+iframe { display: block;}
+li { list-style: none;}
+sub, sup{ font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;}
+sup { top: -0.5em;}
+sub { bottom: -0.25em;}
+input[type="password"] { -webkit-text-security: disc;}
+button, input { border: none;}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none;}
+input[type="text"], input[type="password"], input[type="search"], textarea { background-color: #fff; border: 1px solid #ddd; color: #aaa; -webkit-appearance: none; -webkit-user-select: text;}
+input[type="text"]:focus, input[type="password"]:focus, input[type="search"]:focus, textarea:focus { border-color: #52a8ec; outline: 0; color: #333;}

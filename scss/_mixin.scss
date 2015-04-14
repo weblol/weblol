@@ -1,0 +1,57 @@
+%cf {
+	&::before, &::after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin flex-box {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex; 
+}
+@mixin flex-dir ($value1, $value2) {
+	-webkit-box-orient: $value2;
+	-moz-box-orient: $value2;
+	-webkit-flex-direction: $value1;
+	flex-direction: $value1;
+}
+@mixin flex-wrap-fix ($value1, $value2) {
+	-webkit-box-lines: $value2;
+	-moz-box-lines: $value2;
+	-webkit-flex-wrap: $value1;
+	flex-wrap: $value1;
+}
+@mixin flex-deuce ($num) {
+	-webkit-box-flex: $num;
+	-moz-box-flex: $num;
+	-ms-flex: $num;
+	-webkit-flex: $num;
+	flex: $num;
+}
+@mixin flex-order($num) {
+	-webkit-box-ordinal-group: $num;  
+	-moz-box-ordinal-group: $num;     
+	-ms-flex-order: $num;     
+	-webkit-order: $num;  
+	order: $num;
+}
+@mixin flex-pack($value) {
+	-webkit-box-pack: $value;
+	-moz-box-pack: $value;
+	-ms-flex-pack: $value;
+	-webkit-justify-content: $value;
+	justify-content: $value;
+}
+@mixin flex-align($value) {
+	-webkit-box-align: $value;
+	-ms-flex-align: $value;
+	-moz-box-align: $value;
+	-webkit-align-items: $value;
+	align-items: $value;
+}
